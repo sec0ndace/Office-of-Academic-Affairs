@@ -1,0 +1,66 @@
+<!-- Add Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+<!-- Optional CSS for smooth hover dropdown and centered items -->
+<style>
+/* Smooth dropdown on hover */
+.navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    margin-top: 0;
+    position: absolute;
+    text-align: center; /* Center the text */
+    min-width: 200px; /* Optional: make dropdown width more even */
+}
+
+/* Center links inside dropdown */
+.dropdown-menu .dropdown-item {
+    text-align: center;
+}
+</style>
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top w-100 p-1" id="navbar">
+    <div class="container-fluid">
+        <a href="https://www.tupcavite.edu.ph/" target="_blank" class="navbar-brand logo">
+            <img src="./img/logo.png" alt="School Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="fw-bold collapse navbar-collapse justify-content-end pe-5" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item ms-5 mt-2"> 
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <!-- Services Dropdown -->
+                <li class="nav-item dropdown ms-5 mt-2">
+                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button">
+                        Services
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                        <li><a class="dropdown-item" href="https://tupassist.online" target="_blank">Add, Drop, and Transfer</a></li>
+                        <li><a class="dropdown-item" href="http://172.16.28.227:8080/TUPC-Online-Clearance/index.php" target="_blank">Online Clearance</a></li>
+                    </ul>
+                </li>
+
+                <!-- Other Nav Items -->
+                <li class="nav-item ms-5 mt-2"> 
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item ms-5 mt-2"> 
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

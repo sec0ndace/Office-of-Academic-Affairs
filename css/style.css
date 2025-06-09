@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-top: 10px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    background: url('/img/main.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #f8f9fa;
+}
+
+.extra-margin {
+    margin-top: 60px !important;
+}
+
+.container {
+    flex: 1;
+}
+
+.transition{
+    animation: transitionIn 0.50s ease-in-out;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform:rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+/* Text Styling */
+h1 {
+    font-size: 8vw;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 5vw;
+    font-weight: 600;
+}
+
+p {
+    font-size: 2vw;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 17vw; }
+    h3 { font-size: 9vw; }
+    p { font-size: 3vw; }
+}
+
+/*Navbar*/
+.navbar {            
+    background-color: rgba(93, 7, 17, 0.7) !important; /* Dark red with low opacity */
+    transition: background-color 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    z-index: 1050; /* Ensure it stays on top of other content */
+    width: 100%;
+}
+
+.navbar .nav-link {
+    color: #E0E0E0 !important;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    display: inline-block;
+}
+
+.navbar .nav-link:hover {
+    color: #ffffff !important;
+    border-bottom: 3px solid #ad0124;
+    transform: scale(1.1); /* Slightly increase size */
+    transition: transform 0.3s ease; /* Smooth animation */
+}
+
+/* Styles for dropdown when minimized */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center; /* Center text */
+        z-index: 1050;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-link {
+        color: #72000a !important;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navbar .nav-link:hover {
+        background-color: rgba(0, 0, 0, 0.1); /* Light gray background */
+        color: gray !important;
+        border-radius: 5px;
+    }
+}
+
+/* Default logo size */
+.logo img {
+    width: 70px;
+    height: auto;
+
+}
+
+/* Adjust logo size for smaller screens */
+@media (max-width: 768px) {
+    .logo img {
+        width: 60px; /* Smaller size for mobile */
+        height: auto; /* Keep the aspect ratio intact */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width:50px; /* Even smaller size for very small screens */
+        height: auto;
+    }
+}
+
+/* Button Styling */
+.btn-primary {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 15px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    color: #72000a;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary:hover {
+    background-color: #E0E0E0;
+    color: #000000;
+    transform: scale(1.05);
+}
+
+.btn-primary:active {
+    background-color: #C0C0C0 !important;
+    color: #000000 !important;
+    transform: scale(0.98);
+}
+.button-container{
+    max-width: 850px;
+}
+
+.btn-primary:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+@media (max-width: 480px) {
+    .btn-primary {
+        width: 100%;
+    }
+}
+
+a.btn-primary:visited {
+    color: #72000a;
+    background-color: #ffffff;
+    border: none;
+}
+
+.btn-primary:focus,
+.btn-primary:active,
+a.btn-primary:focus,
+a.btn-primary:active {
+    background-color: #E0E0E0 !important;
+    color: #000000 !important;
+    border: none !important;
+    transform: scale(1.05);
+    box-shadow: none !important;
+}
+
+/* About Us Section */
+.about-us-h1 {
+    padding-top: 100px;
+    font-size: clamp(28px, 8vw, 75px); /* Adjusts based on screen size */
+    font-weight: 500;
+    display: block; /* Ensures it doesn't exceed the screen width */
+    text-wrap: balance; /* Improves text wrapping */
+    text-align: center; /* Ensures centering */
+    word-break: break-word; /* Prevents overflow */
+}
+
+.vgm-text {
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+.vgm-text li {
+    font-size: 1.2rem;
+}
+
+.hover-effect {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.hover-effect:hover {
+    transform: scale(1.04);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.vision-mission-goals .p-4 {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.vision-mission-goals .p-4:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        transform: 1;
+    }
+}
+.block {
+    animation:appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;    
+}
+@media (max-width: 768px) {
+    .vision-mission-goals .col-md-4 {
+        width: 100%; /* Stack the columns vertically */
+        margin-bottom: 20px; /* Add spacing between boxes */
+    }
+
+    .about-us-h1 {
+        padding-top: 80px; /* Reduce top padding on smaller screens */
+        font-size: clamp(24px, 6vw, 60px); /* Adjust heading size */
+    }
+
+    .vgm-text {
+        font-size: 1.2rem; /* Reduce text size for readability */
+    }
+
+    .vgm-text li {
+        font-size: 1rem;
+    }
+}
+
+
+/* Contact Us */
+.contact-us-h1 {
+    padding-top: 70px;
+    font-size: clamp(28px, 8vw, 75px); /* Adjusts based on screen size */
+    font-weight: 500;
+    display: block; /* Ensures it doesn't exceed the screen width */
+    text-wrap: balance; /* Improves text wrapping */
+    text-align: center; /* Ensures centering */
+    word-break: break-word; /* Prevents overflow */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    align-items: stretch;
+}
+
+.contact-info {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    margin-left: 10px;
+    min-width: 280px;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+}
+.contact-box {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(82, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.contact-box input, .contact-box textarea {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #fff;
+}
+.contact-box input::placeholder, .contact-box textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+.contact-box input:focus, .contact-box textarea:focus {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+.contact-box button {
+    background: #ffffff;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+}
+
+
+/* Footer */
+.bg-dark-red {
+    background-color: #530101 !important;
+    color: white !important;
+}
+
+.footer {
+    width: 100%;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+
+
+/* Login */
+
+.contact-box2 {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 350px;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(82, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.contact-box2 input, .contact-box textarea {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #fff;
+}
+
+.contact-box2 input::placeholder, .contact-box textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-box2 input:focus, .contact-box textarea:focus {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+
+.contact-box2 button {
+    background: #ffffff;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.form-control:focus {
+    border-color: red !important;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5) !important;
+}
+
+.btn-primary:focus, 
+.btn-primary:active {
+    background-color: rgba(156, 156, 156, 0.7) !important; 
+    border-color: rgba(156, 156, 156, 0.7) !important;
+}
+
+
+
+th {
+    display: none;
+}
+
+@media (max-width: 768px) {
+.btn-responsive {
+    padding: 8px 12px;
+    font-size: 14px;
+    width: 75%; 
+    max-width: 300px; 
+    }
+}
+
+.dropdown-menu {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    margin-top: 0;
+    position: absolute;
+    background-color: #ffffff; /* White background */
+    text-align: center;
+    border: none;
+}
+
+/* Dropdown items */
+.dropdown-menu .dropdown-item {
+    color: #000000; /* Black text */
+}
+
+/* Hover effect */
+.dropdown-menu .dropdown-item:hover {
+    background-color: rgba(93, 7, 17, 0.05); /* Light red background on hover */
+    color: #000000; /* Black text on hover */
+}
